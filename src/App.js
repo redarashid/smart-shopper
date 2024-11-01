@@ -5,14 +5,14 @@ import Header3 from "./components/header/Header3";
 import { ColorModeContext, useMode } from "./theme";
 
 function App() {
-  const [ theme, colorMode ]  = useMode();
+  const [theme, colorMode] = useMode();
   return (
-    <ColorModeContext.Provider 
-// @ts-ignore
-    value={colorMode}>
-      <ThemeProvider 
-// @ts-ignore
-      theme={theme}>
+    <ColorModeContext.Provider
+      // @ts-ignore
+      value={colorMode}>
+      <ThemeProvider
+        // @ts-ignore
+        theme={theme}>
         <CssBaseline />
 
         <Header1 />

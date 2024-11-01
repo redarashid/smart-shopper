@@ -16,8 +16,15 @@ const Header1 = () => {
   return (
     <div>
       <div>
-        <IconButton onClick={handleToggle} color="inherit" aria-label="toggle theme">
-          {theme.palette.mode === "light" ? <LightModeOutlined /> : <DarkModeOutlined />}
+        <IconButton
+          onClick={handleToggle}
+          color="inherit"
+          aria-label="toggle theme">
+          {theme.palette.mode === "light" ? (
+            <LightModeOutlined />
+          ) : (
+            <DarkModeOutlined />
+          )}
         </IconButton>
       </div>
     </div>

@@ -39,7 +39,9 @@ export const ColorModeContext = createContext({
 });
 
 export const useMode = () => {
-  const [mode, setMode] = useState(() => localStorage.getItem("mode") || "light");
+  const [mode, setMode] = useState(
+    () => localStorage.getItem("mode") || "light"
+  );
 
   const colorMode = useMemo(
     () => ({
