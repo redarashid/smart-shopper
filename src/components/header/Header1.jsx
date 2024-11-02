@@ -48,13 +48,15 @@ const Header1 = () => {
   };
 
   return (
-    <Box sx={{ bgcolor: "#2B3445",
-    py: "4px",
-    borderBottomRightRadius: "4px",
-    borderBottomLeftRadius: "4px"
-    }}>
+    <Box
+      sx={{
+        bgcolor: "#2B3445",
+        py: "4px",
+        borderBottomRightRadius: "4px",
+        borderBottomLeftRadius: "4px",
+      }}>
       <Container>
-        <Stack direction={"row"} alignItems={"center"} display={"flex"} >
+        <Stack direction={"row"} alignItems={"center"} display={"flex"}>
           <Typography
             variant="body2"
             sx={{
