@@ -32,6 +32,7 @@ const Hero = () => {
         mt: 2.5,
       }}>
       <Swiper
+        loop={true}
         pagination={{ dynamicBullets: true }}
         modules={[Pagination]}
         className="mySwiper">
