@@ -15,11 +15,11 @@ const Hero = () => {
       <Box className="right">
 
         <Box className={"border"}>
-          <img src="../../images/banner-17.jpg" alt="" />
+          <img src="src\images\banner-17.jpg" alt="" />
         </Box>
 
         <Box className={"border"}>
-          Img2
+          <img src="src\images\banner-16.jpg" alt="" />
         </Box>
 
 
