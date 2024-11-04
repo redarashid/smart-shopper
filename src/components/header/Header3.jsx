@@ -10,6 +10,7 @@ import {
   ListItemText,
   Menu,
   MenuItem,
+  Stack,
   Typography,
   useMediaQuery,
   useTheme,
@@ -29,6 +30,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
+import Links from "./Links";
 
 const Header3 = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -65,6 +67,7 @@ const Header3 = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
+        mt: 5,
       }}>
       <Box>
         <Button
@@ -151,7 +154,18 @@ const Header3 = () => {
         </Menu>
       </Box>
 
-      {useMediaQuery('(max-width:100px)') && (
+      {useMediaQuery("(min-width:1200px)") && (
+        <Stack gap={4} direction={"row"} alignItems={"center"}>
+          <Links title={"Home"} />
+          <Links title={"Mega Menu"} />
+          <Links title={"Full Screen Menu"} />
+          <Links title={"pages"} />
+          <Links title={"User Account"} />
+          <Links title={"Vendor Account"} />
+        </Stack>
+      )}
+
+      {useMediaQuery("(max-width:1200px)") && (
         <IconButton onClick={toggleDrawer("top", true)}>
           <MenuIcon
             sx={{
