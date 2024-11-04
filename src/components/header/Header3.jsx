@@ -155,7 +155,7 @@ const Header3 = () => {
       </Box>
 
       {useMediaQuery("(min-width:1200px)") && (
-        <Stack gap={4} direction={"row"} alignItems={"center"}>
+        <Stack zIndex={999} gap={4} direction={"row"} alignItems={"center"}>
           <Links title={"Home"} />
           <Links title={"Mega Menu"} />
           <Links title={"Full Screen Menu"} />

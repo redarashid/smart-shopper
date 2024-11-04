@@ -13,6 +13,10 @@ export const getDesignTokens = (mode) => ({
             main: "#F6F9Fc",
           },
 
+          bg: {
+            secoundry: "#f6f6f6"
+          },
+
           neutral: {
             main: "#64748B",
           },
@@ -28,6 +32,11 @@ export const getDesignTokens = (mode) => ({
           neutral: {
             main: "#64748B",
           },
+
+          bg : {
+            secoundry: "#1D2021"
+          },
+
           favColor: {
             main: grey[800],
           },
