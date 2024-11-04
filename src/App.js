@@ -21,9 +21,12 @@ function App() {
         <Header2 />
         <Header3 />
 
-        <Box bgcolor={theme.
-// @ts-ignore
-        palette.bg.secondary}>
+        <Box
+          bgcolor={
+            // @ts-ignore
+            theme.palette.bg.secoundry
+          }
+        >
           <Hero />
         </Box>
       </ThemeProvider>

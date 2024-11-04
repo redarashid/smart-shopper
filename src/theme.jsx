@@ -14,7 +14,7 @@ export const getDesignTokens = (mode) => ({
           },
 
           bg: {
-            secoundry: "#f6f6f6"
+            secoundry: "#F6F9FC"
           },
 
           neutral: {

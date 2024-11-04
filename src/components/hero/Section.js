@@ -58,7 +58,6 @@ const MyIcon = ({ icon, title, subTitle }) => {
   const theme = useTheme();
   return (
     <Box
-            className="border"
       sx={{
         justifyContent: useMediaQuery("(min-width:600px)") ? "center" : "left", 
         flexGrow: 1,

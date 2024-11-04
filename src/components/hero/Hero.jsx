@@ -32,6 +32,7 @@ const Hero = () => {
           justifyContent: "space-between",
           alignItems: "center",
           mt: 2.5,
+          pt: 3
         }}>
         <Swiper
           loop={true}
