@@ -12,11 +12,15 @@ import React from "react";
 
 const ScrollToTop = () => {
   return (
-    <Zoom in={trigger}>
-      <Fab size="small" sx={{position: "fixed", bottom: 33, right: 33}} color="primary" aria-label="add">
-      <KeyboardArrowUp fontSize="medium" />
+    <Zoom in={true}>
+      <Fab
+        size="small"
+        sx={{ position: "fixed", bottom: 33, right: 33 }}
+        color="primary"
+        aria-label="add">
+        <KeyboardArrowUp fontSize="medium" />
       </Fab>
-    </Zo>
+    </Zoom>
   );
 };
 
