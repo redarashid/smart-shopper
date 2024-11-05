@@ -1,6 +1,7 @@
 import {
   Box,
   Container,
+  IconButton,
   Rating,
   Stack,
   Typography,
@@ -15,6 +16,9 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import Dialog from "@mui/material/Dialog";
+import { Close } from "@mui/icons-material";
+import ProudectDetails from "./ProudectDetails";
 
 const Main = () => {
   const [alignment, setAlignment] = React.useState("left");
@@ -26,6 +30,16 @@ const Main = () => {
   const [value, setValue] = React.useState(2);
 
   const theme = useTheme();
+
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
   return (
     <Container sx={{ py: 9 }}>
       <Stack
@@ -80,16 +94,28 @@ const Main = () => {
         </ToggleButtonGroup>
       </Stack>
 
-      <Stack direction={"row"} flexWrap={"wrap"} justifyContent={"space-between"}>
+      <Stack
+        direction={"row"}
+        flexWrap={"wrap"}
+        justifyContent={"space-between"}>
         <Box>
           {["aa", "dd", "ss"].map((item) => {
             return (
-              <Card key={item} sx={{ maxWidth: 333, mt: 6, ":hover .MuiCardMedia-root": { rotate: "1deg", scale: "1.1" , transition: "0.35s" } }}>
+              <Card
+                key={item}
+                sx={{
+                  maxWidth: 333,
+                  mt: 6,
+                  ":hover .MuiCardMedia-root": {
+                    rotate: "1deg",
+                    scale: "1.1",
+                    transition: "0.35s",
+                  },
+                }}>
                 <CardMedia
                   sx={{ height: 277 }}
                   image="./images/1.jpg"
                   title="green iguana"
-
                 />
                 <CardContent>
                   <Stack
@@ -113,6 +139,7 @@ const Main = () => {
                 </CardContent>
                 <CardActions>
                   <Button
+                    onClick={handleClickOpen}
                     sx={{
                       textTransform: "capitalize",
                       justifyContent: "space-between",
@@ -134,6 +161,28 @@ const Main = () => {
           })}
         </Box>
       </Stack>
+
+      <Dialog
+        sx={{
+          ".MuiPaper-root": { minWidth: { xs: "100%", md: 800 } },
+        }}
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description">
+        <IconButton
+          sx={{
+            ":hover": { color: "red", rotate: "180deg", transition: "0.3s" },
+            position: "absolute",
+            top: 0,
+            right: 10,
+          }}
+          onClick={handleClose}>
+          <Close />
+        </IconButton>
+
+        <ProudectDetails />
+      </Dialog>
     </Container>
   );
 };
